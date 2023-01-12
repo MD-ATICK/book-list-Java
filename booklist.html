@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css" />
+    <title>My BookList App</title>
+
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;700&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;600;700&display=swap');    
+        #book-list{
+          color: black;
+        }
+        table{
+          border-radius: 20px;
+          overflow: hidden;
+          padding: 0;
+          margin: 0;
+        }
+        table thead tr th{
+          border: 0;
+        }
+  </style>
+  </head>
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: rgb(52, 52, 52); color: white;">
+    <div class="container mt-4">
+      <h1 id="hea" class="display-4 text-center"><i class="fas fa-book-open text-warning"></i> JS Bangladesh<span class="text-warning">  Book </span>List</h1>
+      <form id="book-form">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" style="color: black;" id="title" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input type="text" style="color: black;" id="author" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="year">Year</label>
+          <input type="text" style="color: black;" id="year" class="form-control" />
+        </div>
+        <input type="submit" value="Add Book" class="btn btn-warning btn-block" />
+      </form>
+      <table class="table table-striped mt-5 text-center" style="background-color: rgb(31, 31, 31); color: rgb(238, 238, 238); border-radius: 5px; border: none; outline: none;">
+        <thead>
+          <tr>
+            <th style="border-top: 0;">Title</th>
+            <th style="border-top: 0;">Author</th>
+            <th style="border-top: 0;">Year</th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+    </div>
+
+    <script src="booklist.js"></script>
+  </body>
+</html>
